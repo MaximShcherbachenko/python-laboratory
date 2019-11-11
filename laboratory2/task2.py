@@ -14,7 +14,9 @@ def validator_2(prompt):
     while prompt == "Enter value of A:" and number <= 1:
         number = float(validator_1(re_integer, prompt))
     return number
-while True:
+
+q = 0
+while q != "-":
     A = validator_2("Enter value of A:")
     k = validator_2("Enter value of k:")
     i = 1
@@ -32,5 +34,3 @@ while True:
             b = c
             i += 1
     q = input("Press <<->> for exit or any button(s) to continue:")
-    if q == "-":
-        break
