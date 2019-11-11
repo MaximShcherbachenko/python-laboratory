@@ -1,5 +1,5 @@
+"""На осі ОХ розташовані три точки а, b, с (ввести з клавіатури). Визначити, яка з точок b або  cрозташована ближче до а."""
 import re
-print("Щербаченко Максим Анатолійович \nЛабораторна робота №1 \nВаріант 23 \nВизначення найближчої точки  \n")
 
 re_integer = re.compile("\d+$")
 
@@ -15,14 +15,18 @@ def validator_2(prompt):
     return number
 
 
-first_value = validator_2("Enter dot a:")
-second_value = validator_2("Enter dot b:")
-third_value = validator_2("Enter dot c:")
+while True:
+    first_value = validator_2("Enter dot a:")
+    second_value = validator_2("Enter dot b:")
+    third_value = validator_2("Enter dot c:")
 
+    if abs(second_value - first_value) < abs(third_value - first_value):
+        print("b is closer to a.")
+    elif abs(second_value - first_value) == abs(third_value - first_value):
+        print("Dot b = dot c.")
+    else:
+        print("Dot c is closer to dot a.")
 
-if abs(second_value - first_value) < abs(third_value - first_value):
-    print("b is closer to a.")
-elif abs(second_value - first_value) == abs(third_value - first_value):
-    print("Dot b = dot c.")
-else:
-    print("Dot c is closer to dot a.")
+    q = input("Press <<->> for exit or any button(s) to continue:")
+    if q == "-":
+        break
