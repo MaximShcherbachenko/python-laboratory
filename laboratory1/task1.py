@@ -20,6 +20,6 @@ while True:
     a = validator_2("Enter value of a:")
     b = validator_2("Enter value of b:")
     print((a + 4 * b) * (a - 3 * b) + 2 * a)
-    q = input("Press <<->> for exit or any button to continue:")
+    q = input("Press <<->> for exit or any button(s) to continue:")
     if q == "-":
         break
