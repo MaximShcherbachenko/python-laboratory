@@ -12,7 +12,7 @@ def validator_1(pattern, promt):
 
 
 def validator_2(prompt):
-    number = int(validator_1(re_integer, prompt))
+    number = float(validator_1(re_integer, prompt))
     return number
 
 a = validator_2("Enter value of a:")
