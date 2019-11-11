@@ -15,7 +15,8 @@ def validator_2(prompt):
     return number
 
 
-while True:
+q = 0
+while q != "-":
     first_value = validator_2("Enter dot a:")
     second_value = validator_2("Enter dot b:")
     third_value = validator_2("Enter dot c:")
@@ -28,5 +29,3 @@ while True:
         print("Dot c is closer to dot a.")
 
     q = input("Press <<->> for exit or any button(s) to continue:")
-    if q == "-":
-        break
