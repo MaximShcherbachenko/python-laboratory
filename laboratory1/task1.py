@@ -3,8 +3,6 @@ import re
 
 re_integer = re.compile("\d+$")
 
-re_integer = re.compile("\d+$")
-
 def validator_1(pattern, promt):
     a_value = input(promt)
     while not bool(pattern.match(a_value)):
