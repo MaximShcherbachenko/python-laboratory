@@ -17,7 +17,8 @@ def validator_2(prompt):
             number = float(validator_1(re_integer, prompt))
     return number
 c = 0
-while True:
+q = 0
+while q != "-":
     x = validator_2("Enter value of x:")
     i = validator_2("Enter number of first iteration:")
     n = validator_2("Enter the final value of iterations:")
@@ -29,5 +30,3 @@ while True:
         i += 1
     print("Result is", round(c, 3))
     q = input("Press <<->> for exit or any button(s) to continue:")
-    if q == "-":
-        break
